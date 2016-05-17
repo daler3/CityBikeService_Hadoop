@@ -7,16 +7,31 @@ import com.csvreader.*;
 
 
 public class CsvReaderBike {
+		
+	public CsvReaderBike(){
+		CsvReader products;
+		try {
+			products = new CsvReader("Dati_Csv/201501-citibike-tripdata.csv");
+			products.readHeaders();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}        
+	}
 	
 	public void getField(){
 		 try {
 	
-	         CsvReader products = new CsvReader("products.csv");
+	         CsvReader products = new CsvReader("Dati_Csv/201501-citibike-tripdata.csv");
 	
 	         products.readHeaders();
 	
 	         while (products.readRecord())
 	         {
+	        	 //fai tutti i singoli metodi
 	             String productID = products.get("ProductID");
 	             String productName = products.get("ProductName");
 	             String supplierID = products.get("SupplierID");
