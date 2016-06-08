@@ -1,6 +1,6 @@
 package primo;
 
-import java.awt.List;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.StringTokenizer;
@@ -15,7 +15,7 @@ import org.apache.hadoop.mapred.Reporter;
 
 import com.csvreader.CsvReader;
 
-public class MapperClass extends MapReduceBase implements Mapper<LongWritable, Text, IntWritable, IntWritable> {
+public class Mapper1Class extends MapReduceBase implements Mapper<LongWritable, Text, IntWritable, Text> {
 
 	private static IntWritable durata;
 	private static IntWritable weekNumber;
@@ -23,7 +23,7 @@ public class MapperClass extends MapReduceBase implements Mapper<LongWritable, T
 	private Text word = new Text();
 	
 	@Override
-	public void map(LongWritable key, Text value, OutputCollector<IntWritable, IntWritable> output, Reporter reporter) throws IOException {
+	public void map(LongWritable key, Text value, OutputCollector<IntWritable, Text> output, Reporter reporter) throws IOException {
 		
 		/*
 		CsvReader dati = null;
@@ -38,11 +38,17 @@ public class MapperClass extends MapReduceBase implements Mapper<LongWritable, T
 			e.printStackTrace();
 		}   
 		   */
-		
+		Integer numeroAssegnamento;
 		String valStr0 = value.toString();
 		String valStr=valStr0.replaceAll("\"", "");
 		//System.err.println(valStr);
 		String valStrSplitted[]=valStr.split(",");
+		String userType = valStrSplitted[12];
+		if(userType=="Subscriber"){
+			numeroAssegnamento=0;
+		}else{
+			numeroAssegnamento=1;
+		}
 		
 		//System.out.println(valStr);
 		//String keyStr = key.toString();
@@ -54,27 +60,28 @@ public class MapperClass extends MapReduceBase implements Mapper<LongWritable, T
 			//System.out.println("ma zio");
 		}else{
 			//String splitted[]=valStr.split(",");
-			int duration = Integer.parseInt(valStrSplitted[0]);
-			durata = new IntWritable(duration);
+			//int duration = Integer.parseInt(valStrSplitted[0]);
+			//durata = new IntWritable(duration);
+			
+			String durationNcustomer = valStrSplitted[0]+"-"+numeroAssegnamento.toString();
+			//System.err.println("Ecco: "+durationNcustomer);
+			
+			word.set(durationNcustomer);
+			
 			String settimana[] = valStrSplitted[1].split(" ");
-			
 			//splitto la settimana 
-			String settimanaSplit[] = settimana[0].split("/");
-			
+			String settimanaSplit[] = settimana[0].split("/");			
 			String mese = settimanaSplit[0];
 			String giorno = settimanaSplit[1];
-			String anno = settimanaSplit[2];
-			
+			//String anno = settimanaSplit[2];		
 			int nGiorno = Integer.parseInt(giorno);
 			int nMese = Integer.parseInt(mese);
-			
 			int nSettimana = (int)getSettimana (nGiorno, nMese) +1;
-			
 			weekNumber = new IntWritable(nSettimana); 
 			
 			//word.set(settimana[0]); 
 			
-			output.collect(weekNumber, durata);
+			output.collect(weekNumber, word);
 		}
 	
 	/*	

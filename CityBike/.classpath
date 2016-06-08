@@ -175,5 +175,7 @@
 	<classpathentry kind="lib" path="/Users/daniele/Desktop/hadoop-2.7.0/share/hadoop/common/hadoop-nfs-2.7.0.jar"/>
 	<classpathentry kind="lib" path="/Users/daniele/Desktop/hadoop-2.7.0/share/hadoop/common/hadoop-common-2.7.0.jar"/>
 	<classpathentry kind="lib" path="/Users/daniele/Desktop/UNIVERSITY/POLIMI/Magistrale_MI/MiddleWare/esercizi_eclipse/javacsv2.1/javacsv.jar"/>
+	<classpathentry kind="lib" path="jfreechart-1.0.19/jfreechart-1.0.19-demo.jar"/>
+	<classpathentry kind="lib" path="jcommon-1.0.23/lib/junit.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
