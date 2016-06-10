@@ -107,9 +107,9 @@ public class MainClass extends Configured implements Tool {
         JobControl jobControl = new JobControl("chaining");
         jobControl.addJob(actualJob1);
         jobControl.addJob(actualJob2);
-        jobControl.addJob(actualJob3);
-        jobControl.addJob(actualJob4);
-        actualJob4.addDependingJob(actualJob3); 
+        //jobControl.addJob(actualJob3);
+        //jobControl.addJob(actualJob4);
+        //actualJob4.addDependingJob(actualJob3); 
         
         Thread t = new Thread(jobControl); 
         t.setDaemon(true);
