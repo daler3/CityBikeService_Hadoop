@@ -1,0 +1,96 @@
+http://insightdataengineering.com/blog/hadoopdevops/
+http://stackoverflow.com/questions/24793294/kill-a-java-process-in-linux-by-process-name-instead-of-pid
+http://stackoverflow.com/questions/11889261/datanode-process-not-running-in-hadoop
+
+namenode_public_dns => ec2-52-35-118-80.us-west-2.compute.amazonaws.com ip-172-31-21-199
+datanode1_public_dns => ec2-52-41-243-94.us-west-2.compute.amazonaws.com ip-172-31-21-201
+datanode2_public_dns => ec2-52-32-34-68.us-west-2.compute.amazonaws.com ip-172-31-21-200
+datanode3_public_dns => ec2-52-36-233-117.us-west-2.compute.amazonaws.com ip-172-31-21-198
+
+
+
+namenode_public_dns => ec2-52-36-154-105.us-west-2.compute.amazonaws.com ip-172-31-40-202
+datanode1_public_dns => ec2-52-39-175-151.us-west-2.compute.amazonaws.com ip-172-31-40-199
+datanode2_public_dns => ec2-52-39-131-42.us-west-2.compute.amazonaws.com ip-172-31-40-201
+datanode3_public_dns => ec2-52-37-185-75.us-west-2.compute.amazonaws.com ip-172-31-40-200
+
+
+ec2-52-36-154-105.us-west-2.compute.amazonaws.com ip-172-31-40-202
+ec2-52-39-175-151.us-west-2.compute.amazonaws.com ip-172-31-40-199
+ec2-52-39-131-42.us-west-2.compute.amazonaws.com ip-172-31-40-201
+ec2-52-37-185-75.us-west-2.compute.amazonaws.com ip-172-31-40-200
+
+namenode_public_dns namenode_hostname
+datanode1_public_dns datanode1_hostname
+datanode2_public_dns datanode2_hostname
+datanode3_public_dns datanode3_hostname
+
+
+
+
+sudo chmod 600 /Users/daniele/ssh_conn/my-personal-key.pem
+
+
+/Users/daniele/ssh_conn
+
+mv  -v /Users/daniele/ssh_conn/my-personal-key.pem /Users/daniele/.ssh/
+
+
+
+Host namenode
+  HostName ec2-52-36-154-105.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile /Users/daniele/.ssh/my-personal-key.pem
+
+Host datanode1
+  HostName ec2-52-39-175-151.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile /Users/daniele/.ssh/my-personal-key.pem
+
+Host datanode2
+  HostName ec2-52-39-131-42.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile /Users/daniele/.ssh/my-personal-key.pem
+
+Host datanode3
+  HostName ec2-52-37-185-75.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile /Users/daniele/.ssh/my-personal-key.pem
+
+
+ scp /Users/daniele/.ssh/my-personal-key.pem /Users/daniele/.ssh/config namenode:~/.ssh
+
+
+
+   <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://ec2-52-36-154-105.us-west-2.compute.amazonaws.com:9000</value>
+  </property>
+
+
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property> 
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>ec2-52-36-154-105.us-west-2.compute.amazonaws.com</value>
+  </property>
+
+
+   <property>
+    <name>mapreduce.jobtracker.address</name>
+    <value>ec2-52-36-154-105.us-west-2.compute.amazonaws.com:54311</value>
+  </property>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+
+
+
+

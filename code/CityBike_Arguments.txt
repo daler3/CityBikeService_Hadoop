@@ -1,0 +1,5 @@
+CityBike_Comp:
+hdfs://localhost:9000/user/inputs/Dati_Csv/ hdfs://localhost:9000/user/output1 hdfs://localhost:9000/user/output2 hdfs://localhost:9000/user/output3 /Users/daniele/Desktop/hadoop-2.7.0/etc/hadoop
+
+CityBike_Charts:
+/Users/daniele/hadoopprjfile/output/output1 /Users/daniele/hadoopprjfile/output/output2
