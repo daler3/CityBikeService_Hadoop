@@ -20,7 +20,9 @@ You must provide input & output paths in command line. Examples (to be edited ac
 [Examples of input & output - command line](https://github.com/daler3/CityBikeService_Hadoop/blob/master/CityBike_Arguments.txt)
 
 You can also find jar files & libraries needed (for each jar) here: 
-[Jar](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Jar_files)
+
+[Jar](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Jar_files); 
+
 [Libraries](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Libraries)
 
 
