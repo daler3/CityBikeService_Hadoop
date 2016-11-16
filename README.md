@@ -8,6 +8,8 @@ Datasets used can be download from this url:
 Explanation of the source code of the project and explanation on how to set-up a fully distributed cluster on Hadoop can be found here: 
 [Download doc](https://github.com/daler3/CityBikeService_Hadoop/blob/master/Doc-CityBikeService_Hadoop.pdf)
 
+Some examples on my Hadoop settings (with Amazon Web Services) and other tips can be found [here](https://github.com/daler3/CityBikeService_Hadoop/tree/master/setting%20hadoop/hadoopprj)
+
 Source code of the main program can be found here: 
 [Source code](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables/Source_Code_CityBikeHadoop/CityBike_Comp/src/primo)
 
@@ -17,8 +19,6 @@ You must provide by command line the input & output path in command line. Exampl
 You can also find jar files & libraries needed (for each jar) here: 
 [Jar & libraries](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables)
 
-
-The goal of this project is to infer qualitative data regarding the use of the CitiBike Service in New York City. Start by downloading and combining the data sets collected during 2015 from this url.
 
 Each row in the data set contains the following data:
 
