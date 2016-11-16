@@ -42,7 +42,7 @@ Each row in the data set contains the following data:
     sex of the biker 
 
 
-Information to provide using Hadoop: 
+Information provided (output): 
 
     - average duration of trips per week in 2015
     - number of customers (NOT subscribers) using the bikes per week in 2015
