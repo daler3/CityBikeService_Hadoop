@@ -16,14 +16,15 @@ Source code of the main program can be found here:
 Source code of charts program can be found here: 
 [Charts code](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Source_Code_CityBikeHadoop/CityBike_charts/src/charts)
 
+You can also find jar files here: [Jar](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Jar_files); 
+
+and libraries needed: [Libraries](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Libraries)
+
+
 You must provide input & output paths in command line. Examples (to be edited according to your own paths) can be found here:
 [Examples of input & output - command line](https://github.com/daler3/CityBikeService_Hadoop/blob/master/CityBike_Arguments.txt)
 
-You can also find jar files & libraries needed (for each jar) here: 
 
-[Jar](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Jar_files); 
-
-[Libraries](https://github.com/daler3/CityBikeService_Hadoop/tree/master/Libraries)
 
 
 Each row in the data set contains the following data:
