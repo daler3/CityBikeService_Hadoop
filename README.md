@@ -13,7 +13,10 @@ Some examples on my Hadoop settings (with Amazon Web Services) and other tips ca
 Source code of the main program can be found here: 
 [Source code](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables/Source_Code_CityBikeHadoop/CityBike_Comp/src/primo)
 
-You must provide by command line the input & output path in command line. Examples (to be edited according to your own paths) can be found here:
+Source code of charts program can be found here: 
+[Charts code](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables/Source_Code_CityBikeHadoop/CityBike_charts/src/charts)
+
+You must provide input & output path in command line. Examples (to be edited according to your own paths) can be found here:
 [Examples of input & output - command line](https://github.com/daler3/CityBikeService_Hadoop/blob/master/code%26libraries%26deliverables/CityBike_Arguments.txt)
 
 You can also find jar files & libraries needed (for each jar) here: 
