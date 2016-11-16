@@ -3,19 +3,19 @@
 Used Hadoop in a fully distributed cluster to infer qualitative data regarding the use of the CityBike Service in a city (MapReduce, Java).
 
 Datasets used can be download from this url: 
-[Download](http://home.deib.polimi.it/guinea/Materiale/Middleware/index.html)
+[Download datasets](http://home.deib.polimi.it/guinea/Materiale/Middleware/index.html)
 
 Explanation of the source code of the project and explanation on how to set-up a fully distributed cluster on Hadoop can be found here: 
-[Download](https://github.com/daler3/CityBikeService_Hadoop/blob/master/Doc-CityBikeService_Hadoop.pdf)
+[Download doc](https://github.com/daler3/CityBikeService_Hadoop/blob/master/Doc-CityBikeService_Hadoop.pdf)
 
 Source code of the main program can be found here: 
-[Download](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables/Source_Code_CityBikeHadoop/CityBike_Comp/src/primo)
+[Source code](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables/Source_Code_CityBikeHadoop/CityBike_Comp/src/primo)
 
 You must provide by command line the input & output path in command line. Examples (to be edited according to your own paths) can be found here:
-[Download](https://github.com/daler3/CityBikeService_Hadoop/blob/master/code%26libraries%26deliverables/CityBike_Arguments.txt)
+[Examples of input & output - command line](https://github.com/daler3/CityBikeService_Hadoop/blob/master/code%26libraries%26deliverables/CityBike_Arguments.txt)
 
 You can also find jar files & libraries needed (for each jar) here: 
-[Download](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables)
+[Jar & libraries](https://github.com/daler3/CityBikeService_Hadoop/tree/master/code%26libraries%26deliverables)
 
 
 The goal of this project is to infer qualitative data regarding the use of the CitiBike Service in New York City. Start by downloading and combining the data sets collected during 2015 from this url.
